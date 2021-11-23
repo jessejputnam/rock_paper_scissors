@@ -3,6 +3,16 @@
 Table of Contents
 ###########################
 
+****************************
+Display Notes: 
+font-family: 'Comforter Brush', cursive; // cursive writing
+font-family: 'Indie Flower', cursive; // normal writing
+font-family: 'Special Elite', cursive; // 
+font-family: 'Press Start 2P', cursive; // game writing
+
+****************************
+
+
 ###################
 #format
 #titlecard
@@ -18,100 +28,178 @@ Table of Contents
 
 /* ################# #format ################## */
 body {
-  background: rgb(53, 53, 53);
+  background: black;
+  font-family: "Indie Flower", Georgia, 'Times New Roman', Times, serif;
 }
+
+/* fonts */
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
 
 /* ################# #titlecard ################## */
 .titlecard {
-  border: solid 1px black;
+  border: ridge 4px rgb(152, 153, 65);
   text-align: center;
-  height: 50px;
-  background: yellow;
+  height: 60px;
+  line-height: 60px;
+  font-family: "Special Elite", cursive;
+  background: url("images/parchment.jpg")
 }
 /* ################# #gameover ################## */
 .gameover {
-  border: solid 1px black;
-  height: 35px;
+  height: 50px;
   width: 900px;
   margin: 0 auto;
-  background: rgb(236, 236, 156);
+  /* background: url("images/gold-pattern.jpg"); */
+  background: black;
+  border: solid 4px black;
 }
 
 .gameover__title {
-  border: solid 1px black;
-  width: 200px;
-  height: 35px;
+  width: 300px;
+  height: 48px;
+  line-height: 35px;
   text-align: center;
   margin: 0 auto;
-  background: rgb(243, 243, 220);
+  background: black;
+  font-family: "Press Start 2P", monospace;
+  font-size: 18px;
+  color: red;
+  border: ridge 7px gold;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: relative;
+  top: 7px;
 }
 
 /* ################# #gameboard ################## */
 .gameboard {
   height: 500px;
   width: 900px;
-  border: solid 1px black;
+  border: solid 4px black;
   margin: 0 auto;
   background: rgb(184, 168, 168);
 }
 
 /* ################# #scoreboard ################## */
 .scoreboard {
-  border: solid 1px black;
-  background: rgb(240, 204, 204);
+  border: solid 3px black;
+  background: rgb(202, 202, 202);
+  height: 89px;
+  background: url("images/gold-pattern.jpg");
 }
 
 .scoreboard__title {
-  border: solid 1px black;
+  background: linear-gradient(90deg, rgba(199,149,232,1) 0%, rgba(242,152,152,1) 50%, rgba(203,181,150,1) 100%);
+  border: ridge 3px rgb(219, 198, 80);
+  height: 25px;
+  padding-top: 3px;
+  line-height: 22px;
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Comforter Brush", cursive;
+  border-radius: 20px;
+  position: relative;
+  top: 7px;
 }
 
 .scoreboard__container {
-  border: solid 1px black;
+  display: flex;
+  justify-content: center;
 }
 
-/* #######scoreboard players ######### */
-.scoreboard__player__container {
-  border: solid 1px black;
+.score__containers {
+  width: 100px;
+  height: 50px;
+  text-align: center;
 }
 
+.scoreboard__scores {
+  font-size: 32px;
+  font-weight: bold;
+  background: rgb(209, 24, 24);
+  color: white;
+}
+
+.scoreboard__names {
+  background: black;
+  color: white;
+  border: ridge 6px rgb(255, 233, 233);
+}
+
+/* #######scoreboard players######### */
 .scoreboard__player__score {
-  border: solid 1px black;
+  border: ridge 3px rgb(70, 70, 70);
+  border-top-left-radius: 20px;
 }
 
 .scoreboard__player__name {
-  border: solid 1px black;
+  border-top: none;
+  border-bottom-left-radius: 5px;
 }
 
 .scoreboard__comp__score {
-  border: solid 1px black;
+  border: solid 3px rgb(70, 70, 70);
+  border-top-right-radius: 20px;
 }
 
 .scoreboard__comp__name {
-  border: solid 1px black;
+  border-top: none;
+  border-bottom-right-radius: 5px;
 }
 
 /* ################# #gameboard players ################## */
 .gameboard__players {
   border: solid 1px black;
   display: flex;
+  background: url("images/wood.jpg")
+}
+
+.players__name {
+  text-align: center;
+  height: 35px;
+  line-height: 37px;
+  background: url("images/parchment.jpg");
+  border: ridge 3px beige;
+  font-weight: bold;
 }
 
 /* #######player container######### */
 .player__container {
   border: solid 1px black;
   width: 50%;
-  background: rgb(168, 176, 184);
-}
-
-.player__title {
-  border: solid 1px black;
 }
 
 .player__playarea {
-  border: solid 1px black;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.player__playarea__rock {
+.player__choice {
+  margin: 0 5px;
+  height: 50px;
+  width: 60px;
+  cursor: pointer;
+}
+
+/* .player__playarea__rock {
   border: solid 1px black;
 }
 
@@ -121,24 +209,52 @@ body {
 
 .player__playarea__scissors {
   border: solid 1px black;
+} */
+
+/* #######player action######### */
+/* .player__action {
+  position: absolute;
+} */
+
+.player__action__btn {
+  height: 70px;
+  width: 70px;
+  position: relative;
+  left: 190px;
+  bottom: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: radial-gradient(circle, rgba(210,200,24,0.7432432432432432) 6%, rgba(63,225,71,1) 44%, rgba(101,113,194,1) 91%);
+  color: red;
+  font-weight: bold;
+}
+
+.player__action__btn:hover {
+  background: radial-gradient(circle, rgba(80,112,180,0.7432432432432432) 6%, rgba(63,225,71,1) 44%, rgba(235,227,83,1) 83%);
 }
 
 /* #######computer container######### */
 .comp__container {
   border: solid 1px black;
   width: 50%;
-  background: rgb(176, 168, 184);
   height: 400px;
 }
 
-.comp__title {
-  border: solid 1px black;
-}
-
 .comp__playarea {
-  border: solid 1px black;
+  height: 300px;
 }
 
 .comp__playarea__turn {
   border: solid 1px black;
+  border-radius: 20px;
+  height: 150px;
+  width: 180px;
+  margin: 80px auto 0;
+  background: radial-gradient(circle, rgba(7,7,7,1) 0%, rgba(123,117,117,1) 44%, rgba(45,45,45,1) 100%);
+  color: white;
+  text-align: center;
+  line-height: 160px;
+  padding-left: 15px;
+  font-family: "Press Start 2P", monospace;
+  font-size: 90px;
 }

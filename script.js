@@ -72,5 +72,3 @@ const game = function (rounds) {
     ? `You win! Player: ${playerScore} vs. Computer: ${computerScore}`
     : `You lose! Computer: ${computerScore} vs Player: ${playerScore}`;
 };
-
-console.log(game(5));

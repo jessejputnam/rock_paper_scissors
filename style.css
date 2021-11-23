@@ -1,0 +1,144 @@
+/*
+########################### 
+Table of Contents
+###########################
+
+###################
+#format
+#titlecard
+#gameover
+#gameboard
+#scoreboard
+  ##scoreboard players
+#gameboard players
+  ##player container
+  ##computercontainer
+###################
+*/
+
+/* ################# #format ################## */
+body {
+  background: rgb(53, 53, 53);
+}
+
+/* ################# #titlecard ################## */
+.titlecard {
+  border: solid 1px black;
+  text-align: center;
+  height: 50px;
+  background: yellow;
+}
+/* ################# #gameover ################## */
+.gameover {
+  border: solid 1px black;
+  height: 35px;
+  width: 900px;
+  margin: 0 auto;
+  background: rgb(236, 236, 156);
+}
+
+.gameover__title {
+  border: solid 1px black;
+  width: 200px;
+  height: 35px;
+  text-align: center;
+  margin: 0 auto;
+  background: rgb(243, 243, 220);
+}
+
+/* ################# #gameboard ################## */
+.gameboard {
+  height: 500px;
+  width: 900px;
+  border: solid 1px black;
+  margin: 0 auto;
+  background: rgb(184, 168, 168);
+}
+
+/* ################# #scoreboard ################## */
+.scoreboard {
+  border: solid 1px black;
+  background: rgb(240, 204, 204);
+}
+
+.scoreboard__title {
+  border: solid 1px black;
+}
+
+.scoreboard__container {
+  border: solid 1px black;
+}
+
+/* #######scoreboard players ######### */
+.scoreboard__player__container {
+  border: solid 1px black;
+}
+
+.scoreboard__player__score {
+  border: solid 1px black;
+}
+
+.scoreboard__player__name {
+  border: solid 1px black;
+}
+
+.scoreboard__comp__score {
+  border: solid 1px black;
+}
+
+.scoreboard__comp__name {
+  border: solid 1px black;
+}
+
+/* ################# #gameboard players ################## */
+.gameboard__players {
+  border: solid 1px black;
+  display: flex;
+}
+
+/* #######player container######### */
+.player__container {
+  border: solid 1px black;
+  width: 50%;
+  background: rgb(168, 176, 184);
+}
+
+.player__title {
+  border: solid 1px black;
+}
+
+.player__playarea {
+  border: solid 1px black;
+}
+
+.player__playarea__rock {
+  border: solid 1px black;
+}
+
+.player__playarea__paper {
+  border: solid 1px black;
+}
+
+.player__playarea__scissors {
+  border: solid 1px black;
+}
+
+/* #######computer container######### */
+.comp__container {
+  border: solid 1px black;
+  width: 50%;
+  background: rgb(176, 168, 184);
+  height: 400px;
+}
+
+.comp__title {
+  border: solid 1px black;
+}
+
+.comp__playarea {
+  border: solid 1px black;
+}
+
+.comp__playarea__turn {
+  border: solid 1px black;
+}

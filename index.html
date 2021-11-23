@@ -4,9 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock, Paper, Scissors</title>
+    <title>Rock || Paper || Scissors</title>
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
   </head>
+
   <body>
-    <script src="script.js"></script>
+    <div class="titlecard">
+      <h1 class="titlecard__title">Rock || Paper || Scissors</h1>
+    </div>
+    <!-- end titlecard -->
+
+    <div class="gameover">
+      <h2 class="gameover__title">Player Wins</div>
+    </div>
+    <!-- end gameover -->
+
+    <div class="gameboard">
+
+      <div class="scoreboard">
+        <h3 class="scoreboard__title">Score</h3>
+        <div class="scoreboard__container">
+          <div class="scoreboard__player__container">
+            <h4 class="scoreboard__player__score">0</h4>
+            <p class="scoreboard__player__name">Player</p>
+          </div>
+          <!-- end scoreboard__player__container -->
+          <div class="scoreboard__comp__container">
+            <h4 class="scoreboard__comp__score">0</h4>
+            <p class="scoreboard__comp_name">Computer</p>
+          </div>
+          <!-- end scoreboard__computer__container -->
+        </div>
+        <!-- end scoreboard__container -->
+      </div>
+      <!-- end scoreboard -->
+
+      <div class="gameboard__players">
+        <div class="player__container">
+          <h2 class="player__title">PLAYER</h2>
+          <div class="player__playarea">
+            <div class="player__playarea__rock player__choice">Rock</div>
+            <div class="player__playarea__paper player__choice">Paper</div>
+            <div class="player__playarea__scissors player__choice">Scissors</div>
+          </div>
+          <!-- end player__playarea -->
+          <div class="player__action">
+            <button class="player__action__btn">Choose</button>
+          </div>
+          <!-- end player__action -->
+        </div>
+        <!-- end player__container -->
+  
+        <div class="comp__container">
+          <h2 class="comp__title">COMPUTER</h2>
+          <div class="comp__playarea">
+            <div class="comp__playarea__turn">?</div>
+          </div>
+          <!-- end comp__playarea -->
+        </div>
+        <!-- end comp__container -->
+      </div>
+      <!-- end gameboard__players -->
+    </div> 
+    <!-- end gameboard -->
+
   </body>
 </html>

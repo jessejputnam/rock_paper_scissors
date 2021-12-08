@@ -4,9 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock, Paper, Scissors</title>
+    <title>Rock || Paper || Scissors</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Indie+Flower&family=Press+Start+2P&family=Special+Elite&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
   </head>
+
   <body>
-    <script src="script.js"></script>
+    <div class="modal hidden">
+      <h3 class="modal-title">Play</h3>
+      <p class="modal-p">Best of 5 rounds</p>
+    </div>
+    <!-- end modal -->
+
+    <div class="main-page">
+
+      <div class="titlecard">
+        <h1 class="titlecard__title">Rock || Paper || Scissors</h1>
+      </div>
+      <!-- end titlecard -->
+  
+      <div class="gameover">
+        <h2 class="gameover__title">Player Wins</div>
+      </div>
+      <!-- end gameover -->
+  
+      <div class="gameboard">
+  
+        <div class="scoreboard">
+          <h3 class="scoreboard__title">Score</h3>
+          <div class="scoreboard__container">
+            <div class="scoreboard__player__container score__containers">
+              <h4 class="scoreboard__player__score scoreboard__scores">0</h4>
+              <p class="scoreboard__player__name scoreboard__names">Player</p>
+            </div>
+            <!-- end scoreboard__player__container -->
+            <div class="scoreboard__comp__container score__containers">
+              <h4 class="scoreboard__comp__score scoreboard__scores">0</h4>
+              <p class="scoreboard__comp__name scoreboard__names">Computer</p>
+            </div>
+            <!-- end scoreboard__computer__container -->
+          </div>
+          <!-- end scoreboard__container -->
+        </div>
+        <!-- end scoreboard -->
+  
+        <div class="gameboard__players">
+          <div class="player__container">
+            <h2 class="player__title players__name">PLAYER</h2>
+            <div class="player__playarea">
+              <img src="images/rock-clipart.png" alt="rock" class="player__playarea__rock player__choice" />
+              <img src="images/paper-clipart.png" alt="paper" class="player__playarea__paper player__choice">
+              <img src="images/scissors-clipart.png" alt="scissors" class="player__playarea__scissors player__choice" />
+            </div>
+            <!-- end player__playarea -->
+            <div class="player__action">
+              <button type="button" class="player__action__btn">Play Round</button>
+            </div>
+            <!-- end player__action -->
+          </div>
+          <!-- end player__container -->
+    
+          <div class="comp__container">
+            <h2 class="comp__title players__name">COMPUTER</h2>
+            <div class="comp__playarea">
+              <img src="images/question-mark.png" class="comp__playarea__turn">
+            </div>
+            <!-- end comp__playarea -->
+          </div>
+          <!-- end comp__container -->
+        </div>
+        <!-- end gameboard__players -->
+      </div> 
+      <!-- end gameboard -->
+    </div>
+    <!-- end main-page -->
+
   </body>
 </html>

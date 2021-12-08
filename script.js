@@ -1,5 +1,56 @@
 "use strict";
 
+//  DECLARE DOM VARIABLES
+const playerSelectChoice = document.querySelectorAll(".player__choice");
+const playRock = document.querySelector(".player__playarea__rock");
+const playPaper = document.querySelector(".player__playarea__paper");
+const playScissors = document.querySelector(".player__playarea__scissors");
+const actionPlayRound = document.querySelector(".player__action__btn");
+const computerChoiceImg = document.querySelector(".comp__playarea__turn");
+const computerChoiceDisplay = document.querySelector(
+  ".comp__playarea__compchoice"
+);
+const displayPlayerScore = document.querySelector(".scoreboard__player__score");
+const displayComputerScore = document.querySelector(".scoreboard__comp__score");
+const gameOver = document.querySelector(".gameover__title");
+
+// DECLARE STORED INFO VARIABLES
+let playerSelect, computerSelect;
+let computerScoreStored = 0;
+let playerScoreStored = 0;
+
+const computerPlay = function () {
+  let roll = Math.ceil(Math.random() * 3);
+  return roll === 1 ? "rock" : roll === 2 ? "paper" : "scissors";
+};
+const newRound = function () {
+  playerSelect = "";
+  computerSelect = "";
+};
+
+// Player select choice
+playerSelectChoice.forEach((selection) => {
+  selection.addEventListener("click", (e) => {
+    playerSelect = selection.alt;
+    // add in CSS class AND transition height and width 1s in player__choice style block
+    selection.classList.add("selected-item");
+  });
+});
+
+document.addEventListener("click", () => {
+  if (playerSelect !== "rock") playRock.classList.remove("selected-item");
+  if (playerSelect !== "paper") playPaper.classList.remove("selected-item");
+  if (playerSelect !== "scissors")
+    playScissors.classList.remove("selected-item");
+});
+
+// Play Round
+actionPlayRound.addEventListener("click", () => {
+  computerSelect = computerPlay();
+  computerChoiceDisplay.innerText = computerSelect;
+});
+
+/*
 // Computer input
 const computerPlay = function () {
   let roll = Math.ceil(Math.random() * 3);
@@ -72,3 +123,4 @@ const game = function (rounds) {
     ? `You win! Player: ${playerScore} vs. Computer: ${computerScore}`
     : `You lose! Computer: ${computerScore} vs Player: ${playerScore}`;
 };
+*/

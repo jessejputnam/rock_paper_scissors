@@ -17,13 +17,14 @@
   </head>
 
   <body>
-    <div class="modal hidden">
+    <div class="next__round hidden"></div>
+    <div class="modal">
       <h3 class="modal-title">Play</h3>
-      <p class="modal-p">Best of 5 rounds</p>
+      <p class="modal-p">First Player to 5 Wins</p>
     </div>
     <!-- end modal -->
 
-    <div class="main-page">
+    <div class="main-page background--blur">
 
       <div class="titlecard">
         <h1 class="titlecard__title">Rock || Paper || Scissors</h1>
@@ -31,11 +32,11 @@
       <!-- end titlecard -->
   
       <div class="gameover">
-        <h2 class="gameover__title">Player Wins</div>
+        <h2 class="gameover__title"></div>
       </div>
       <!-- end gameover -->
   
-      <div class="gameboard">
+      <div class="gameboard background--blur">
   
         <div class="scoreboard">
           <h3 class="scoreboard__title">Score</h3>
@@ -66,6 +67,7 @@
             <!-- end player__playarea -->
             <div class="player__action">
               <button type="button" class="player__action__btn">Play Round</button>
+              <div class="player__no-selection hidden">Please make a selection to play</div>
             </div>
             <!-- end player__action -->
           </div>

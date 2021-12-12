@@ -24,6 +24,7 @@ font-family: 'Press Start 2P', cursive; // game writing
 #gameboard players
   ##player container
   ##computercontainer
+#next round
 #play states
 ###################
 */
@@ -52,16 +53,22 @@ h4 {
 }
 
 /* ################# #modal ################## */
-
-/* goes on .main-page and .gameboard */
 .background--blur {
-  -webkit-filter: blur(5px) grayscale(50%);
-  filter: blur(5px) grayscale(50%);
+  filter: blur(2px) grayscale(70%);
+}
+
+.blur--lose {
+  filter: hue-rotate(300deg) blur(2px) grayscale(70%);
+}
+
+.blur--win {
+  filter: hue-rotate(90deg) blur(2px) grayscale(70%);
 }
 
 .modal {
-  height: 200px;
-  width: 200px;
+  height: 210px;
+  width: 210px;
+  line-height: 20px;
   background: radial-gradient(
     circle,
     rgba(0, 0, 0, 1) 0%,
@@ -72,12 +79,24 @@ h4 {
   color: rgb(255, 255, 255);
   border-radius: 50%;
   border: ridge 6px red;
-  padding-top: 55px;
+  padding: 60px 10px 0;
   text-align: center;
   position: absolute;
   bottom: 200px;
   left: 42.5%;
   z-index: 2;
+  transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
+}
+
+.modal:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 10px 5px 5px gray;
+}
+
+.modal:active {
+  filter: brightness(80%);
+  transform: scale(1.05);
 }
 
 .modal-title {
@@ -273,6 +292,7 @@ h4 {
   );
   color: red;
   font-weight: bold;
+  transition: filter 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .player__action__btn:hover {
@@ -283,6 +303,26 @@ h4 {
     rgba(235, 227, 83, 1) 83%
   );
   border: groove 4px red;
+  transform: scale(1.1);
+  box-shadow: 10px 5px 5px gray;
+}
+
+.player__action__btn:active {
+  filter: brightness(80%);
+  transform: scale(1.05);
+}
+
+.player__no-selection {
+  margin: -40px auto;
+  padding-top: 5px;
+  font-size: 0.8rem;
+  height: 30px;
+  width: 200px;
+  text-align: center;
+  border: ridge 3px red;
+  color: black;
+  border-radius: 15px;
+  background: rgba(255, 181, 181, 0.6);
 }
 
 /* #######computer container######### */
@@ -293,20 +333,52 @@ h4 {
 }
 
 .comp__playarea__turn {
-  border: ridge 6px rgb(255, 62, 62);
+  border: ridge 6px rgb(0, 0, 0);
   border-radius: 20px;
   height: 150px;
   width: 180px;
   margin: 80px auto 0;
   background: radial-gradient(
     circle,
-    rgba(7, 7, 7, 1) 0%,
+    rgb(240, 196, 196) 0%,
     rgba(123, 117, 117, 1) 44%,
-    rgba(45, 45, 45, 1) 100%
+    rgb(247, 179, 179) 100%
   );
   padding: 5px;
 }
 
+/* #################### #next round ################# */
+.next__round {
+  height: 70px;
+  width: 200px;
+  background: rgba(247, 250, 79, 0.911);
+  font-size: 1.4rem;
+  padding: 12px 15px 5px;
+  position: absolute;
+  bottom: 20%;
+  left: 345px;
+  text-align: center;
+  border: ridge 4px yellow;
+  border-radius: 35px;
+  transition: transform 0.5s, box-shadow 0.5s;
+  z-index: 3;
+}
+
+.next__round:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 10px 5px 5px gray;
+}
+
+.next__round:active {
+  filter: brightness(80%);
+  transform: scale(1.05);
+}
+
+.next__round--bold {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
 /* ################# #play states ################## */
 .selected-item {
   height: 150px;
